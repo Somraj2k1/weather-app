@@ -1,0 +1,22 @@
+<%- include("partials/header.ejs") -%>
+
+    <form action="/" method="post">
+      <header>
+        <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." name="cityName" />
+        <button class="btn" type="submit">➔</button>
+      </header>
+    </form>
+    <main>
+      <section class="location">
+        <div class="city"><%= Location %></div>
+        <div class="date"><%= Date %></div>
+      </section>
+      <img src="<%= image %>" alt="">
+      <div class="current">
+        <div class="temp"><%= Temp %><span>°c</span></div>
+        <div class="weather"><%= Weather %></div>
+        <div class="hi-low"><%= Highlow %></div>
+      </div>
+    </main>
+
+  <%- include("partials/footer.ejs") -%>
